@@ -40,4 +40,15 @@ LMSTUDIO_MODEL_ID=anderes-modell ./scripts/start-paperclip.sh
 - `dangerouslySkipPermissions` muss an (Paperclip-Default für unattended), sonst greifen die Provider-Env-Overrides nicht.
 - Ohne laufendes LM Studio schlägt der Start-Check im Skript fehl.
 - Alternative UI: Paperclip → Connectors → Local endpoint / Chat Completions auf dieselbe URL.
-- **Kontextlänge:** Paperclip/OpenCode-Prompts sind groß. In LM Studio für das Modell mindestens **32k** Context Length setzen (besser 64k+). Fehler der Form *„tokens to keep … greater than the context length“* → Kontext erhöhen und Agent-Session in Paperclip zurücksetzen.
+- **Kontextlänge:** Paperclip/OpenCode-Prompts sind groß. Das Modell muss mit **≥ 65536** geladen sein (`loaded_context_length`, nicht nur max). Prüfen/setzen:
+
+```bash
+./scripts/ensure-lmstudio-context.sh
+# oder manuell:
+curl -s http://127.0.0.1:1234/api/v0/models | python3 -m json.tool
+curl -s -X POST http://127.0.0.1:1234/api/v1/models/load \
+  -H 'Content-Type: application/json' \
+  -d '{"model":"qwen3.6-27b-mlx","context_length":65536}'
+```
+
+Fehler *„tokens to keep … greater than the context length“* = zu kleiner geladener Kontext (oft Default 8192). Danach Agent-Session in Paperclip zurücksetzen.

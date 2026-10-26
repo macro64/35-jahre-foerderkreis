@@ -1,32 +1,16 @@
-# Nächste Schritte (manuell)
+# Nächste Schritte
 
-Setup ist fertig. Noch von dir:
+## Erledigt (Korrekturen)
 
-## 1. LM Studio Kontext
+- LM Studio Kontext auf **65536** geladen (vorher 8192 → Prompt-Fehler)
+- Workspace auf ASCII-Pfad `foerderkreis` + Git-Initialcommit
+- Agent-Timeouts auf 1800s; Heartbeats nur Web-Lead aktiv
+- **FRD-2 Smoke-Test: done** — Seitentitel „Förderkreis des Museums für Glaskunst Lauscha e.V.“
 
-Für `qwen3.6-27b-mlx` in LM Studio **Context Length ≥ 32768** setzen, Server neu starten.
+## Noch von dir
 
-Ohne das: Heartbeat-Fehler *tokens to keep … greater than the context length*.
+1. WordPress Application Password → `.env` → `./scripts/wp-rest-smoke.sh`
+2. **FRD-1** (WordPress-Neuaufbau) in Paperclip starten / Web-Lead zuweisen lassen
+3. Vor jedem Paperclip-Start: `./scripts/ensure-lmstudio-context.sh` (macht auch `start-paperclip.sh`)
 
-## 2. WordPress Application Password
-
-1. https://dev.glas-in-lauscha.de/wp-admin/ → Application Password „Paperclip“
-2. `cp .env.example .env` und Credentials eintragen
-3. `./scripts/wp-rest-smoke.sh` — muss authentifiziert den Startseitentitel zeigen
-
-## 3. Paperclip UI
-
-http://127.0.0.1:3100 — Company **Förderkreis des Museums für Glaskunst Lauscha e.V.**
-
-- Issues: **FRD-1** Neuaufbau, **FRD-2** Smoke-Test, **FRD-3** Daten-Dump (Phase 2)
-- Agents: Vorstand, Web-Lead, Redaktion, QA (`opencode_local` / `lmstudio/qwen3.6-27b-mlx`)
-
-Start mit Env:
-
-```bash
-./scripts/start-paperclip.sh
-```
-
-## 4. Danach
-
-Website-Checkliste abarbeiten → Phase 2 Dump (`docs/data-dump.md`).
+UI: http://127.0.0.1:3100

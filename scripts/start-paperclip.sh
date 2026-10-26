@@ -21,12 +21,9 @@ echo "Model:     lmstudio/${LMSTUDIO_MODEL_ID}"
 echo "UI:        http://127.0.0.1:3100"
 echo
 
-# Fail early if LM Studio is not serving
-if ! curl -sf "${LMSTUDIO_BASE_URL}/models" >/dev/null; then
-  echo "ERROR: LM Studio nicht erreichbar unter ${LMSTUDIO_BASE_URL}" >&2
-  echo "Bitte in LM Studio ein Modell laden und den Local Server starten." >&2
-  exit 1
-fi
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+# Fail early + ensure context length (>=64k) for Paperclip prompts
+bash "$ROOT/scripts/ensure-lmstudio-context.sh"
 
 # Prefer instance .env (also holds LM Studio vars after setup); shell exports above still win for this process.
 npx --yes paperclipai@latest run "$@"
