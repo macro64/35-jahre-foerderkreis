@@ -1,0 +1,43 @@
+{
+  "companyId": "1cf44007-90c9-48f7-9dd5-b6e80efaa5b7",
+  "vorstandId": "2b9ae433-fb1a-477a-9052-075ce0d5d80f",
+  "webLeadId": "bc450295-36b3-4786-8923-580d025bacb8",
+  "redaktion": "3cf4978d-8505-4f13-8cdf-8236469bea98",
+  "qa": "82f8c521-550e-4881-8524-f694d66238ed",
+  "stagingUrl": "https://dev.glas-in-lauscha.de",
+  "model": "lmstudio/qwen3.6-27b-mlx",
+  "goalId": "dc6cbeb9-c034-4633-b851-db827237f345",
+  "projectId": "6297d107-e562-4a0f-a659-6eb1a87d45d3",
+  "firstIssueId": "f457bf20-f2c1-4207-b8ee-0cc3cbc61519",
+  "agents": [
+    {
+      "id": "82f8c521-550e-4881-8524-f694d66238ed",
+      "name": "QA",
+      "status": "running",
+      "lifecycleState": "ready",
+      "lifecycleError": null
+    },
+    {
+      "id": "3cf4978d-8505-4f13-8cdf-8236469bea98",
+      "name": "Redaktion",
+      "status": "running",
+      "lifecycleState": "ready",
+      "lifecycleError": null
+    },
+    {
+      "id": "2b9ae433-fb1a-477a-9052-075ce0d5d80f",
+      "name": "Vorstand",
+      "status": "running",
+      "lifecycleState": "ready",
+      "lifecycleError": null
+    },
+    {
+      "id": "bc450295-36b3-4786-8923-580d025bacb8",
+      "name": "Web-Lead",
+      "status": "running",
+      "lifecycleState": "ready",
+      "lifecycleError": null
+    }
+  ],
+  "workspaceCwd": "/Users/walterprecht/paperclip_crews/fo\u0308rderkreis"
+}

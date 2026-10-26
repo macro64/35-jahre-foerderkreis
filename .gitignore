@@ -1,0 +1,13 @@
+.env
+.env.local
+data/
+!data/README.md
+!data/wordpress/.gitkeep
+*.sql
+*.sql.gz
+*.wpress
+node_modules/
+.DS_Store
+*.log
+.opencode/
+.paperclip-first-issue.json

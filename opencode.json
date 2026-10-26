@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "wordpress": {
+      "type": "local",
+      "command": ["npx", "-y", "mcp-wordpress"],
+      "enabled": true,
+      "environment": {
+        "WORDPRESS_SITE_URL": "{env:WORDPRESS_SITE_URL}",
+        "WORDPRESS_USERNAME": "{env:WORDPRESS_USERNAME}",
+        "WORDPRESS_APP_PASSWORD": "{env:WORDPRESS_APP_PASSWORD}"
+      }
+    }
+  }
+}
