@@ -5,7 +5,7 @@
   "redaktion": "3cf4978d-8505-4f13-8cdf-8236469bea98",
   "qa": "82f8c521-550e-4881-8524-f694d66238ed",
   "stagingUrl": "https://dev.glas-in-lauscha.de",
-  "model": "lmstudio/qwen3.6-27b-mlx",
+  "model": "openai/gpt-4o-mini",
   "goalId": "dc6cbeb9-c034-4633-b851-db827237f345",
   "projectId": "6297d107-e562-4a0f-a659-6eb1a87d45d3",
   "firstIssueId": "f457bf20-f2c1-4207-b8ee-0cc3cbc61519",
@@ -39,5 +39,7 @@
       "lifecycleError": null
     }
   ],
-  "workspaceCwd": "/Users/walterprecht/paperclip_crews/fo\u0308rderkreis"
+  "workspaceCwd": "/Users/walterprecht/paperclip_crews/fo\u0308rderkreis",
+  "openaiModel": "openai/gpt-4o-mini",
+  "budgetMonthlyCentsHint": 1000
 }

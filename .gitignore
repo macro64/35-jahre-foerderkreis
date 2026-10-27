@@ -11,3 +11,6 @@ node_modules/
 *.log
 .opencode/
 .paperclip-first-issue.json
+
+# Agent SSH private keys — never commit
+.secrets/

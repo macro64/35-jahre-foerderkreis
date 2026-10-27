@@ -2,6 +2,8 @@
 
 Ziel: Agents (vor allem **Web-Lead**) können [dev.glas-in-lauscha.de](https://dev.glas-in-lauscha.de/) über MCP lesen und gezielt schreiben.
 
+**Zugang:** Nur WordPress Application Password / MCP. Staging: https://dev.glas-in-lauscha.de/
+
 ## 1. Application Password (einmalig)
 
 1. Als Admin anmelden: https://dev.glas-in-lauscha.de/wp-admin/

@@ -6,7 +6,7 @@ LMSTUDIO_BASE="${LMSTUDIO_BASE_URL:-http://127.0.0.1:1234}"
 LMSTUDIO_BASE="${LMSTUDIO_BASE%/}"
 # Strip /v1 if present
 LMSTUDIO_BASE="${LMSTUDIO_BASE%/v1}"
-MODEL_ID="${LMSTUDIO_MODEL_ID:-qwen3.6-27b-mlx}"
+MODEL_ID="${LMSTUDIO_MODEL_ID:-qwen3.5-9b-mlx}"
 CONTEXT="${LMSTUDIO_CONTEXT_LENGTH:-65536}"
 
 if ! curl -sf "${LMSTUDIO_BASE}/api/v0/models" >/dev/null; then
